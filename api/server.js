@@ -1,15 +1,15 @@
-const express = require("express")
+const express = require("express");
 
-const shippersRouter = require("./shippers/shippers-router")
+const shippersRouter = require("./shippers/shippers-router");
 
-const server = express()
+const server = express();
 
-server.use(express.json())
+server.use(express.json());
 
-server.use("/api/shippers", shippersRouter)
+server.use("/api/shippers", shippersRouter);
 
 server.get("/", (req, res) => {
-  res.status(200).json({ api: "up" })
-})
+  res.status(200).json({ api: "up" });
+});
 
-module.exports = server
+module.exports = server;
